@@ -1,6 +1,6 @@
 version: "3"
 networks:
-  internal:
+  monitoring:
     external: true
 services:
   loki:
@@ -13,7 +13,7 @@ services:
     restart: unless-stopped
     command: -config.file=/etc/loki/loki-config.yml
     networks:
-      - internal
+      - monitoring
   grafana:
     image: grafana/grafana:latest
     container_name: grafana
@@ -23,4 +23,4 @@ services:
       - "3000:3000"
     restart: unless-stopped
     networks:
-      - internal
+      - monitoring
