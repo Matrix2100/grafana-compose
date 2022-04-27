@@ -1,0 +1,6 @@
+.DS_Store
+*.log
+tmp/
+grafana.db
+__default__.tmpl
+docker_volumes/
