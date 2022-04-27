@@ -16,6 +16,7 @@ services:
       - monitoring
   grafana:
     image: grafana/grafana:latest
+    user: 0:0
     container_name: grafana
     volumes:
       - ./grafana:/var/lib/grafana
