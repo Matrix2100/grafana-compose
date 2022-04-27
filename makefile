@@ -1,6 +1,6 @@
 build_droplet:
-	mkdir -p /var/libs/grafana
-	chmod 775 -R /var/libs/grafana
+	mkdir -p /var/lib/grafana
+	chmod 775 -R /var/lib/grafana
 	docker-compose up -d --build --force-recreate
 
 build_local:
